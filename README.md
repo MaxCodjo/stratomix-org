@@ -10,19 +10,20 @@ Static site for **Stratomix**, rebuilt from masterstrategos.com (GoDaddy Website
 | `/contact/` | Contact |
 | `/privacy-policy/` | Privacy notice |
 
-- `_archive/masterstrategos.com/` holds raw HTML snapshots of the original site (2026-09-13), the original logo, and each post's extracted body. GitHub Pages' Jekyll build skips `_`-prefixed folders, so it is never served.
+- `public/` is the website. Railway (Railpack) detects the `public` folder and serves it with Caddy; nothing else in the repo is served.
+- `_archive/masterstrategos.com/` holds raw HTML snapshots of the original site (2026-09-13), the original logo, and each post's extracted body. Not served.
 - Contact and subscribe forms open the visitor's mail app (`mailto:`). Add a form backend (Formspree, Buttondown) when volume warrants it.
-- Home hero video (`assets/hero.mp4`, poster `assets/hero.jpg`): "Mountains, Dolomites, Cadini Di Misurina" by ferrisdrone, [Pixabay](https://pixabay.com/videos/mountains-dolomites-137822/), Pixabay Content License (free commercial use, no attribution required). Fade-in/out trimmed and played forward then reversed for a seamless 11.6 s loop; 1080p H.264, no audio, 2 MB.
+- Home hero video (`public/assets/hero.mp4`, poster `public/assets/hero.jpg`): "Mountains, Dolomites, Cadini Di Misurina" by ferrisdrone, [Pixabay](https://pixabay.com/videos/mountains-dolomites-137822/), Pixabay Content License (free commercial use, no attribution required). Fade-in/out trimmed and played forward then reversed for a seamless 11.6 s loop; 1080p H.264, no audio, 2 MB.
 - Not carried over: Getty stock photos (licensed to the GoDaddy site only), the empty Products page, GoDaddy accounts/bookings/orders.
 
 ## Preview
 
 ```bash
-python3 -m http.server 8765
+python3 -m http.server 8765 --directory public
 ```
 
-## Deploy (GitHub Pages)
+## Hosting
 
-1. Settings → Pages → Deploy from branch `main`, folder `/`. `CNAME` already sets `stratomix.org`.
-2. At GoDaddy DNS for stratomix.org, replace the parked A records with GitHub's: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, plus `CNAME www → maxcodjo.github.io`.
-3. Once the certificate issues, tick "Enforce HTTPS".
+- **www.stratomix.org** — Railway service deployed from `main` (auto-deploys on push). GoDaddy DNS: `CNAME www → <service>.up.railway.app` plus Railway's `TXT` verification record.
+- **stratomix.org** (apex) — GoDaddy can't CNAME the apex to Railway, so the apex keeps GitHub Pages A records (`185.199.108.153`–`185.199.111.153`) served by [MaxCodjo/stratomix-redirect](https://github.com/MaxCodjo/stratomix-redirect), which redirects to `https://www.stratomix.org`.
+- MX records (Google, for max@stratomix.org) stay untouched.
