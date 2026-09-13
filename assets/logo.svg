@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stratomix">
+  <polygon points="32,3 57,17.5 57,46.5 32,61 7,46.5 7,17.5" fill="#2a2150" stroke="#c9a45c" stroke-width="2.5"/>
+  <path d="M32 11 36 28 53 32 36 36 32 53 28 36 11 32 28 28Z" fill="#c9a45c"/>
+  <path d="M32 11 36 28 32 32ZM53 32 36 36 32 32ZM32 53 28 36 32 32ZM11 32 28 28 32 32Z" fill="#f3e3bd"/>
+  <circle cx="32" cy="32" r="3" fill="#2a2150"/>
+</svg>

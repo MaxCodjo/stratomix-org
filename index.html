@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratomix</title>
+<meta name="description" content="Strategic solutions for business success. Achieve clarity and drive growth with our expertise.">
+<link rel="canonical" href="https://stratomix.org/">
+<meta property="og:site_name" content="Stratomix">
+<meta property="og:title" content="Stratomix">
+<meta property="og:description" content="Strategic solutions for business success. Achieve clarity and drive growth with our expertise.">
+<meta property="og:url" content="https://stratomix.org/">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="./"><img src="assets/logo.svg" alt="" width="38" height="38">Stratomix</a>
+<nav aria-label="Main"><a href="about/">About</a><a href="blog/">Blog</a><a href="contact/">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+<p class="eyebrow">Stratomix</p>
+<h1>Clarity. Strategy. Growth.</h1>
+<p>Achieve clarity and drive growth with our expertise.</p>
+<a class="btn" href="about/">Discover Our Services</a>
+</div></section>
+<section class="block"><div class="wrap narrow center">
+<h2>Our Purpose</h2>
+<p class="lead">At Stratomix, we are committed to educating and inspiring individuals and businesses to think strategically. We believe everyone can benefit from strategic thinking, leading to improved decision-making and sustainable success.</p>
+</div></section>
+<section class="block flush-top"><div class="wrap">
+<p class="eyebrow center">From the blog</p>
+<h2 class="center">Insightful Strategies</h2>
+<div class="cards">
+<a class="card" href="blog/the-10-greatest-strategists-in-human-history/"><time datetime="2026-02-07">February 7, 2026</time><h3>The 10 Greatest Strategists in Human History</h3><p>Unleashing the Power of Strategic Mastery</p><span>Continue Reading →</span></a>
+<a class="card" href="blog/10-key-strategies-to-stay-focused-on-your-personal-growth/"><time datetime="2026-01-24">January 24, 2026</time><h3>10 Key Strategies to Stay Focused on Your Personal Growth</h3><p>Personal growth is not a one-time decision but a lifelong strategic journey. In an age of constant distraction, staying…</p><span>Continue Reading →</span></a>
+<a class="card" href="blog/mastering-business-growth-strategies/"><time datetime="2026-01-24">January 24, 2026</time><h3>Mastering Business Growth Strategies</h3><p>Unleashing a New Era of Growth</p><span>Continue Reading →</span></a>
+</div>
+</div></section>
+<section class="block dark"><div class="wrap narrow center">
+<p class="eyebrow">Connect With Us</p>
+<h2>Elevate Your Strategy</h2>
+<form class="subscribe" data-mailto="neree@me.com" data-subject="Subscribe for Strategies">
+<input type="email" name="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email" required>
+<button class="btn" type="submit">Subscribe for Strategies</button>
+</form>
+</div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<nav aria-label="Footer"><a href="./">Home</a><a href="blog/">Blog</a><a href="privacy-policy/">Privacy Policy</a></nav>
+<p>Copyright © 2026 Stratomix. All rights reserved.</p>
+</div></footer>
+<script>
+// ponytail: forms open the visitor's mail app; swap for a form backend (Formspree, Buttondown) when volume matters
+document.querySelectorAll('form[data-mailto]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const body=[...new FormData(f)].map(([k,v])=>k+': '+v).join('\n');location.href='mailto:'+f.dataset.mailto+'?subject='+encodeURIComponent(f.dataset.subject)+'&body='+encodeURIComponent(body)}))
+</script>
+</body>
+</html>

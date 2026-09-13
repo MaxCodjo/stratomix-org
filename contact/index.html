@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Stratomix</title>
+<meta name="description" content="Connect with our experts. Strategic growth starts here.">
+<link rel="canonical" href="https://stratomix.org/contact/">
+<meta property="og:site_name" content="Stratomix">
+<meta property="og:title" content="Contact">
+<meta property="og:description" content="Connect with our experts. Strategic growth starts here.">
+<meta property="og:url" content="https://stratomix.org/contact/">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../"><img src="../assets/logo.svg" alt="" width="38" height="38">Stratomix</a>
+<nav aria-label="Main"><a href="../about/">About</a><a href="../blog/">Blog</a><a href="../contact/" aria-current="page">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero page-hero"><div class="wrap">
+<p class="eyebrow">Contact Us</p>
+<h1>Connect with Our Experts</h1>
+<p>Strategic Growth Starts Here</p>
+</div></section>
+<section class="block"><div class="wrap narrow">
+<form class="contact" data-mailto="neree@me.com" data-subject="Message from stratomix.org">
+<label>Name<input name="name" autocomplete="name"></label>
+<label>Email*<input name="email" type="email" autocomplete="email" required></label>
+<label>Message<textarea name="message" rows="6"></textarea></label>
+<button class="btn" type="submit">Send</button>
+</form>
+<p>Or email us directly at <a href="mailto:neree@me.com">neree@me.com</a>.</p>
+</div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<nav aria-label="Footer"><a href="../">Home</a><a href="../blog/">Blog</a><a href="../privacy-policy/">Privacy Policy</a></nav>
+<p>Copyright © 2026 Stratomix. All rights reserved.</p>
+</div></footer>
+<script>
+// ponytail: forms open the visitor's mail app; swap for a form backend (Formspree, Buttondown) when volume matters
+document.querySelectorAll('form[data-mailto]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const body=[...new FormData(f)].map(([k,v])=>k+': '+v).join('\n');location.href='mailto:'+f.dataset.mailto+'?subject='+encodeURIComponent(f.dataset.subject)+'&body='+encodeURIComponent(body)}))
+</script>
+</body>
+</html>
