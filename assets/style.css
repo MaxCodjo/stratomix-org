@@ -21,6 +21,12 @@ h1,h2,h3,.brand,.eyebrow{font-family:Cinzel,Georgia,serif;font-weight:600;line-h
 .hero>*{position:relative}
 .hero h1{color:#fff;font-size:clamp(2.2rem,6vw,4.2rem);margin:0 0 1rem;letter-spacing:.06em}
 .hero p{font-size:1.25rem;color:var(--soft);margin:0 auto 2.25rem;max-width:36rem}
+/* home hero video: Dolomites aerial (Pixabay, ferrisdrone). Poster shows while loading and for reduced-motion users */
+.hero--video{background:var(--ink) url(hero.jpg) center/cover}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero--video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,21,48,.55),rgba(26,21,48,.8))}
+.hero--video>.wrap{z-index:1}
+@media (prefers-reduced-motion:reduce){.hero-video{display:none}}
 .page-hero{padding:5rem 0 4rem}
 .page-hero h1{font-size:clamp(2rem,5vw,3rem)}
 
